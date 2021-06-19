@@ -43,7 +43,6 @@ img.logo {
 .centered div.linkPane a {
     font-size: x-large;
     vertical-align: middle;
-    color: deepskyblue;
     text-decoration: none;
     transition: color 0.25s;
     margin: 0 20px;
@@ -54,10 +53,14 @@ img.logo {
     opacity: 0;
 }
 
-.centered div.linkPane a:hover {
+a {
+    color:deepskyblue;
+    text-decoration: none;
+}
+a:hover {
     color: rgb(117, 221, 255);
 }
 
-.centered div.linkPane a:active {
+a:active {
     color: rgb(0, 131, 175)
 }
