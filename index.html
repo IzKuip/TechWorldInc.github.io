@@ -2,9 +2,21 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src="//wurfl.io/wurfl.js"></script>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" id="phoneOverrideLoader">
     <script src="./js/animations.js"></script>
     <script src="js/onload.js"></script>
+    <script src="js/pageNavigation.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Home | TechWorldInc</title>
 </head>
 
 <body>
@@ -21,7 +33,7 @@
 
     <center class="centered">
         <div class="linkPane" id="navText">
-            | <a href="./projects/index.html">PROJECTS</a> | <a href="./languages/index.html">LANGUAGES</a> | <a href="./about/index.html">ABOUT</a> | <a href="./contact/index.html">CONTACT</a> |
+            | <a onclick="navigateTo('./projects/index.html')">PROJECTS</a> | <a href="./skills/index.html">SKILLS</a> | <a href="./about/index.html">ABOUT</a> | <a href="./contact/index.html">CONTACT</a> |
         </div>
     </center>
 </body>

@@ -1,0 +1,178 @@
+body {
+    background-color: #222;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+html,
+body {
+    height: 100%;
+    user-select: none;
+}
+
+div.headerBar {
+    width: calc(100% - 40px);
+    padding: 20px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+
+* {
+    outline: none !important;
+}
+
+.right {
+    float: right;
+}
+
+div.headerBar p,
+div.headerBar h1,
+div.headerBar h2,
+div.headerBar h3,
+div.headerBar h4,
+div.headerBar h5 {
+    margin: 0px;
+}
+
+button {
+    transition: background 0.25s, border 0.25s, color 0.25s;
+    padding: 5px;
+    min-width: 70px;
+    background: #333;
+    color: white;
+    border-radius: 2.5px;
+    border: none;
+    margin: 2px 0;
+}
+
+button:hover {
+    background-color: #4b4b4b;
+}
+
+button:active {
+    background-color: #111;
+}
+
+button.transparent {
+    transition: unset;
+    background-color: transparent;
+}
+
+button.transparent:hover {
+    background-color: #333;
+}
+
+button.transparent:active {
+    background-color: #111;
+}
+
+button.transparent.underlineactive {
+    border-bottom: deepskyblue 3px solid;
+    color: deepskyblue;
+    background-color: transparent;
+}
+
+button.transparent.underlineactive:hover {
+    border-bottom: rgb(168, 233, 255) 3px solid;
+    color: rgb(168, 233, 255);
+    background-color: transparent;
+}
+
+button.transparent.underlineactive:active {
+    border-bottom: rgb(0, 124, 165) 3px solid;
+    color: rgb(0, 124, 165);
+    background-color: transparent;
+}
+
+button.transparent.underlineinactive {
+    border-bottom: #555 3px solid;
+    color: #555;
+    background-color: transparent;
+}
+
+button.transparent.underlineinactive:hover {
+    border-bottom: #999 3px solid;
+    color: #999;
+    background-color: transparent;
+}
+
+button.transparent.underlineinactive:active {
+    border-bottom: #333 3px solid;
+    color: #333;
+    background-color: transparent;
+}
+
+div.pageContent {
+    padding: 40px;
+    padding-top: 120px;
+    opacity: 0;
+}
+
+button.projectDisplay {
+    width: 200px;
+    height: 175px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    text-align: left;
+    padding: unset;
+    margin: 5px 2.5px;
+    padding: 10px;
+}
+
+button.projectDisplay:hover {
+    background-color: #444;
+}
+
+button.projectDisplay:active {
+    background-color: #111;
+}
+
+button.projectDisplay>div.info {
+    height: 75px;
+}
+
+button.projectDisplay>div.info>p {
+    margin: 0px;
+}
+
+button.projectDisplay>img {
+    width: calc(100%);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 100px;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+img.fullSize {
+    width: 40%;
+}
+
+div.fullSize {
+    float: right;
+    padding: 50px;
+    width: calc(50% - 200px);
+}
+
+div.fullSize h1 {
+    font-size: 48px;
+    margin: 0px
+}
+
+p#projectDescDisplay {
+    max-width: 50%;
+}

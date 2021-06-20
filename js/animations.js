@@ -1,37 +1,16 @@
 class animations {
-    startLogoAnimation() {
-        var obj = document.getElementById("mainLogo");
-        obj.style.transition = "unset";
-        obj.style.opacity = "0";
-        obj.style.marginTop = "400px";
-        setTimeout(() => {
-            obj.style.transition = "";
-            obj.style.opacity = "1";
-            obj.style.marginTop = "-200px";
-        }, 500);
-    }
+    startLogoAnimation() { this.animate(document.getElementById("mainLogo"), "unset", "", "0", "1", "400px", "-200px", 500); }
+    startLogoAltTextAnimation() { this.animate(document.getElementById("mainLogoAltText"), "unset", "", "0", "1", "200px", "80px", 500); }
+    startLinksTextAnimation() { this.animate(document.getElementById("navText"), "unset", "", "0", "1", "200px", "240px", 500); }
 
-    startLogoAltTextAnimation() {
-        var textNode = document.getElementById("mainLogoAltText");
-        textNode.style.transition = "unset";
-        textNode.style.opacity = "0";
-        textNode.style.marginTop = "200px";
+    animate(obj, preTransition, afterTransition, preOpacity, afterOpacity, preMarginTop, afterMarginTop, delay) {
+        obj.style.transition = preTransition;
+        obj.style.opacity = preOpacity;
+        obj.style.marginTop = preMarginTop;
         setTimeout(() => {
-            textNode.style.transition = "";
-            textNode.style.opacity = "1";
-            textNode.style.marginTop = "80px";
-        }, 500);
-    }
-
-    startLinksTextAnimation() {
-        var textNode1 = document.getElementById("navText");
-        textNode1.style.transition = "unset";
-        textNode1.style.opacity = "0";
-        textNode1.style.marginTop = "200px";
-        setTimeout(() => {
-            textNode1.style.transition = "";
-            textNode1.style.opacity = "1";
-            textNode1.style.marginTop = "240px";
-        }, 500);
+            obj.style.transition = afterTransition;
+            obj.style.opacity = afterOpacity;
+            obj.style.marginTop = afterMarginTop;
+        }, delay);
     }
 }

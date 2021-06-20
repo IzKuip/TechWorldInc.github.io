@@ -1,0 +1,78 @@
+body {
+    background-color: #222;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+}
+
+html,
+body {
+    height: 100%;
+    user-select: none;
+    margin: 0px;
+}
+
+img.logo {
+    height: 200px;
+    margin-top: 0px;
+    transition: margin-top 2.0s, opacity 1.5s;
+    opacity: 0;
+}
+
+#mainLogoAltText {
+    margin-top: 25px;
+    transition: margin-top 1.0s, opacity 1.5s;
+    opacity: 0;
+}
+
+#mainLogoAltText h1 {
+    margin-bottom: 0px;
+    padding-top: 0px;
+}
+
+#mainLogoAltText p {
+    margin: 0px;
+    opacity: 0.5;
+    font-variant: small-caps;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.centered div.linkPane a {
+    font-size: x-large;
+    vertical-align: middle;
+    text-decoration: none;
+    transition: color 0.25s;
+    margin: 0 20px;
+}
+
+.centered div.linkPane {
+    transition: margin-top 1s, opacity 1.5s;
+    opacity: 0;
+}
+
+a {
+    color: deepskyblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(117, 221, 255);
+}
+
+a:active {
+    color: rgb(0, 131, 175)
+}
+
+* {
+    outline: none !important;
+}
