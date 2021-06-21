@@ -30,4 +30,12 @@ onload = function() {
     for (var i = 0; i < actives.length; i++) {
         actives[i].style.transition = "color 0.25s, border-bottom 0.25s";
     }
+    if (document.title.toLocaleLowerCase().replace(" | techworldinc", "") == "projects") {
+        populateProjectsPage();
+    } else if (document.title.toLocaleLowerCase().replace(" | techworldinc", "") == "project details") {
+        const args = new URLSearchParams(window.location.search);
+        if (args.get("id") != null || args.get("id") != undefined) {
+            setDetails(parseInt(args.get("id")));
+        }
+    }
 }
