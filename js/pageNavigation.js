@@ -13,16 +13,16 @@ function navigateTo(url, fromHome = true) {
         setTimeout(() => {
             textNode.style.transition = "";
             textNode.style.opacity = "0";
-        }, 100);
+        }, 500);
         var textNode1 = document.getElementById("navText");
         textNode1.style.transition = "margin-top 1.0s, opacity 0.75s";
         textNode1.style.opacity = "1";
         setTimeout(() => {
             textNode1.style.transition = "";
             textNode1.style.opacity = "0";
-        }, 100);
+        }, 900);
         setTimeout(() => {
             window.location.href = url;
-        }, 1000);
+        }, 2000);
     }
 }
