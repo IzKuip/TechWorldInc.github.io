@@ -4,28 +4,17 @@
 <head>
     <script>
         let URLPrefix = "30da-77-164-24-60";
-
+        let errorPrefix = `Tunnel ${URLPrefix}.ngrok.io not found\n\nERR_NGROK_3200`;
         setTimeout(() => {
             let url = `https://${URLPrefix}.ngrok.io/`;
-            if (getStatus(url) == 200) {
-                window.location.href = url;
-            } else {
-                document.getElementById("Error").innerText = `Error: unable to redirect: Error ${getStatus(url)} occured.`;
-            }
-        }, 1000);
-
-        function getStatus(url) {
-            var request = new XMLHttpRequest();
-            request.onreadystatechange = function() {
-                if (request.readyState === 4) {
-                    request.status; //this contains the status code
-                    return request.status;
+            fetch(url).then(response => response.text()).then(text => {
+                if (text != errorPrefix) {
+                    window.location.href = url;
+                } else {
+                    document.getElementById("Error").innerText = `Error: ERR_NGROK_3200 occured`;
                 }
-                return "404";
-            };
-            request.open("GET", url, true);
-            request.send(null);
-        }
+            })
+        }, 1000);
     </script>
 </head>
 
