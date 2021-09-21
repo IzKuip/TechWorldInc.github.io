@@ -6,7 +6,7 @@
         let URLPrefix = "30da-77-164-24-60";
 
         setTimeout(() => {
-            let url = `https://${URLPrefix}.ngrok.io/web`;
+            let url = `https://${URLPrefix}.ngrok.io/`;
             if (getStatus(url) == 200) {
                 window.location.href = url;
             } else {
