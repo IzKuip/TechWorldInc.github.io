@@ -8,13 +8,7 @@
         let errorPrefix = `Tunnel ${URLPrefix}.ngrok.io not found\n\nERR_NGROK_3200`;
         setTimeout(() => {
             let url = `https://${URLPrefix}.ngrok.io/`;
-            fetch(url).then(response => response.text()).then(text => {
-                if (text != errorPrefix) {
-                    window.location.href = url;
-                } else {
-                    document.getElementById("Error").innerText = `Error: ERR_NGROK_3200 occured`;
-                }
-            })
+            window.location.href = url;
         }, 1000);
     </script>
 </head>
