@@ -1,0 +1,12 @@
+span.digit.colon {
+    display:none;
+}
+
+span.digit {
+    font-size:4em;
+}
+
+span.digit::after {
+    content:"\a";
+    white-space: pre;
+}
