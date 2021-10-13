@@ -79,38 +79,38 @@ button.transparent:active {
 }
 
 button.transparent.underlineactive {
-    border-bottom: deepskyblue 3px solid;
+    border-bottom: deepskyblue 2px solid;
     color: deepskyblue;
     background-color: transparent;
 }
 
 button.transparent.underlineactive:hover {
-    border-bottom: rgb(168, 233, 255) 3px solid;
+    border-bottom: rgb(168, 233, 255) 2px solid;
     color: rgb(168, 233, 255);
     background-color: transparent;
 }
 
 button.transparent.underlineactive:active {
-    border-bottom: rgb(0, 124, 165) 3px solid;
+    border-bottom: rgb(0, 124, 165) 2px solid;
     color: rgb(0, 124, 165);
     background-color: transparent;
 }
 
 button.transparent.underlineinactive {
-    border-bottom: #555 3px solid;
-    color: #555;
+    border-bottom: rgba(255, 255, 255, 0.3) 2px solid;
+    color: rgba(255, 255, 255, 0.3);
     background-color: transparent;
 }
 
 button.transparent.underlineinactive:hover {
-    border-bottom: #999 3px solid;
-    color: #999;
+    border-bottom: rgba(255, 255, 255, 0.6) 2px solid;
+    color: rgba(255, 255, 255, 0.6);
     background-color: transparent;
 }
 
 button.transparent.underlineinactive:active {
-    border-bottom: #333 3px solid;
-    color: #333;
+    border-bottom: rgba(100, 100, 100, 1) 2px solid;
+    color: rgba(100, 100, 100, 1);
     background-color: transparent;
 }
 
