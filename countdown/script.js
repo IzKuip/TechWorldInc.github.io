@@ -4,6 +4,7 @@ let dayOut,
     secOut,
     wwkOut,
     cddOut,
+    mscOut,
     countDownDate,
     rawCountDownDate = "Oct 29, 2021 09:30:00";
 
@@ -15,6 +16,7 @@ onload = function() {
     secOut = document.getElementById("secOut");
     wwkOut = document.getElementById("weekOut");
     cddOut = document.getElementById("dateOut");
+    mscOut = document.getElementById("secondsOut");
     setInterval(() => {
         const Today = new Date()
         let distance = countDownDate - Today;
@@ -32,6 +34,7 @@ onload = function() {
         secOut.innerText = seconds.toString().padStart(2, "0");
         wwkOut.innerText = weeks.toString().padStart(2, "0");
         cddOut.innerText = rawCountDownDate;
+        mscOut.innerText = (countDownDate - Today).toString().padStart(11,"0");
 
         let colons = document.getElementsByClassName("colon");
 

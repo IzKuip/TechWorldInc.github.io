@@ -76,6 +76,14 @@ span.material-icons {
     display: none;
 }
 
+.noMargin {
+    margin:0;
+}
+
+.noMarginBottom {
+    margin-bottom: 0;
+}
+
 :root {
     --fg: #282828;
     --bg: #ebdbb2;
@@ -88,4 +96,22 @@ span.material-icons {
        --fg: #ebdbb2;
        --bg: #282828;
    }
+}
+
+div.top-bar {
+    width:calc(100% - 20px);
+    padding:10px;
+}
+
+div.top-bar a {
+    opacity: 0.5;
+}
+
+a {
+    text-decoration: none;
+    color:#ebdbb2;
+}
+
+div.top-bar a:hover {
+    opacity: 1;
 }
