@@ -1,0 +1,30 @@
+.header {
+    font-size: 35px;
+}
+
+.sub-header {
+    font-size: 20px;
+    margin-top: 110px;
+    margin: 105px 5px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff2;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fff8;
+}
+
+div.projectDiv {
+    width: 600px;
+}
