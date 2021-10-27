@@ -86,15 +86,15 @@ span.material-icons {
 
 :root {
     --fg: #282828;
-    --bg: #ebdbb2;
+    --bg: rgb(150, 229, 255);
     --gray: #584945;
 }
 
 
 @media (prefers-color-scheme: dark) {
     :root {
-       --fg: #ebdbb2;
-       --bg: #282828;
+       --fg: #fffa;
+       --bg: #034;
    }
 }
 
@@ -110,6 +110,8 @@ div.top-bar a {
 a {
     text-decoration: none;
     color:#ebdbb2;
+    font-family: 'Azaret Mono', monospace;
+    vertical-align: middle;
 }
 
 div.top-bar a:hover {
