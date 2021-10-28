@@ -11,12 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="confetti.js"></script>
     <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="top-bar"><a href="https://www.techworldinc.tk/" title="TechWorldInc"><img src="./logo.png" height="40px">TechWorldInc</a></div>
-    <div class="content">
+    <div class="top-bar"><a href="https://www.techworldinc.tk/" title="TechWorldInc"><img src="./logo.png" height="40px"></a></div>
+    <div class="content" id="countdown">
         <span class="dateDisplay">
             <span id="dateOut">--- --, ---- --:--:--</span>
         </span><br><br>
@@ -29,6 +30,12 @@
         <span class="digit" id="secOut">--</span>
         <p class="dateDisplay noMarginBottom">Less than <span id="weekOut">--</span> Weeks</p>
         <p class="dateDisplay noMargin"><span id="secondsOut">-----------</span>ms Remain</p>
+    </div>
+    <div class="content" id="countdown-done" style="display:none;">
+        <img src="key.png" height="250px">
+        <h2>
+            Sleuteloverdracht!
+        </h2>
     </div>
 </body>
 
