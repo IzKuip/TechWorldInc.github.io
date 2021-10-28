@@ -1,6 +1,6 @@
-async function populateProjectsPage() {
+async function output(url) {
     let projectsOutput = document.getElementById("projectsOutput");
-    let data = await fetch("https://api.github.com/users/TechWorldInc/repos").then(response => response.json()).then(json => {
+    let data = await fetch(url).then(response => response.json()).then(json => {
         return json;
     });
 
@@ -26,21 +26,21 @@ async function populateProjectsPage() {
             let forkDisplayIcon = document.createElement("span");
             let forkDisplayText = document.createElement("span");
 
-            outerDiv.className = "projectDiv";  
+            outerDiv.className = "projectDiv";
             outerDiv.style.opacity = "0";
             outerDiv.style.transition = "opacity 1s";
 
             header.append(headerText);
             subHeader.append(subHeaderText);
-    
+
             headerLink.append(header);
             headerLink.target = "_blank";
             headerLink.href = i.html_url;
-    
+
             subHeader.style.fontWeight = "100";
             subHeader.style.opacity = "0.5";
             subHeader.style.fontSize = "14px"
-    
+
             description.append(descriptionText);
 
             starDisplayIcon.className = "material-icons";
@@ -59,7 +59,7 @@ async function populateProjectsPage() {
 
             forkDisplayText.innerText = i.forks_count;
             forkDisplayText.style.verticalAlign = "middle";
-        
+
             attrDisplay.style.marginBottom = "10px";
             attrDisplay.style.marginTop = "10px";
             attrDisplay.style.opacity = "0.5";
@@ -73,7 +73,7 @@ async function populateProjectsPage() {
             outerDiv.append(subHeader);
             outerDiv.append(description);
             outerDiv.append(attrDisplay);
-    
+
             projectsOutput.append(outerDiv);
 
             setTimeout(() => {
@@ -81,4 +81,13 @@ async function populateProjectsPage() {
             }, maxTimeout);
         }
     });
+    projectsOutput.append(document.createElement("br"));
+    projectsOutput.append(document.createElement("br"));
+}
+
+async function populateProjectsPage() {
+    let projectsOutput = document.getElementById("projectsOutput");
+    projectsOutput.innerHTML = "";
+    await output("https://api.github.com/orgs/TWI-ArcOS/repos");
+    await output("https://api.github.com/users/TechWorldInc/repos");
 }
