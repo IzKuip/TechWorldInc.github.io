@@ -6,7 +6,7 @@ let dayOut,
     cddOut,
     mscOut,
     countDownDate,
-    rawCountDownDate = "Oct 29, 2021 09:30:00";
+    rawCountDownDate = "Nov 20, 2021 00:00:00";
 
 onload = function() {
     countDownDate = new Date(rawCountDownDate).getTime()
