@@ -2,39 +2,18 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Countdown</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="confetti.js"></script>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <script src="./confetti.js"></script>
 </head>
 
 <body>
-    <div class="top-bar"><a href="https://www.techworldinc.tk/" title="TechWorldInc"><img src="./logo.png" height="40px"></a></div>
-    <div class="content" id="countdown">
-        <span class="dateDisplay">
-            <span id="dateOut">--- --, ---- --:--:--</span>
-        </span><br><br>
-        <span class="digit" id="dayOut">---</span>
-        <span class="digit colon">:</span>
-        <span class="digit" id="hourOut">--</span>
-        <span class="digit colon">:</span>
-        <span class="digit" id="minOut">--</span>
-        <span class="digit colon">:</span>
-        <span class="digit" id="secOut">--</span>
-        <p class="dateDisplay noMarginBottom">Less than <span id="weekOut">--</span> Weeks</p>
-        <p class="dateDisplay noMargin"><span id="secondsOut">-----------</span>ms Remain</p>
+    <div id="countdown">
+        <div class="background centered" id="bg">888 : 88 : 88 : 88</div>
+        <div class="foreground centered" id="out">--- : -- : -- : --</div>
     </div>
-    <div class="content" id="countdown-done" style="display:none;">
-        <h1>
-            Verhuizing Afgerond!
-        </h1>
+    <div id="countdown-done" class="centered" style="display:none;">
+        <h1>COUNTDOWN HAS REACHED THE END</h1>
     </div>
 </body>
 
