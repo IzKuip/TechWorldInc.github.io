@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/checkboxes.css">
+    <link rel="stylesheet" href="./css/progressbar.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/fileexplorer.css">
+    <link rel="stylesheet" href="./css/newsettings.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Welcome to ArcOS!</title>
+</head>
+
+<body>
+    <div class="desktopicons" id="desktopIcons">
+        <button class="icon" onclick="windowLogic.openWindow('File Manager');">
+            <img src="./img/file manager.svg" />
+            <br><span name="text">File Manager</span></button>
+        <br>
+        <button class="icon" onclick="windowLogic.openWindow('ArcOS Notepad');">
+            <img src="./img/notepad.svg" />
+            <br><span name="text">ArcOS Notepad</span></button>
+        <br>
+    </div>  
+    <div class="wallpaper"></div>
+    <div class="window" style="opacity:1;visibility: visible;max-width:640px;height:480px;z-index:100000000000">
+        <div class="windowTitle">
+            <p class="titleText"><img src="./img/systemIcon.svg" style="margin-right:5px;vertical-align: middle;height:15px">Welcome to ArcOS!</p>
+            <button class="title close"><span class="material-icons">close</span></button>
+            <button class="title"><span class="material-icons">minimize</span></button>
+        </div>
+        <div class="body" style="padding:20px;">
+            <center>
+                <img src="./img/systemIcon.svg" height="100px">
+                <h2 style="margin:0;">Welcome to ArcOS</h2> 
+            </center><br>
+            <p>ArcOS is a super advanced, Electron-based Operating System Environment<br>
+                that sports all kinds of neat features, such as a working file manager, easy<br>
+                to use application loader, a large amount of personalization, support for multiple<br>
+                accounts with each having the option to add a Argon2i encrypted password, and<br>more. With it being in development since February 17th, 2021, we've done our<br>best to deliver what we believe to be an amazing experience.</p>
+            <center><br>
+                <a target="_blank" href="https://www.github.com/TWI-ArcOS/ArcOS-Releases/releases">
+            <button class="folder big controlPanel">
+                <p>Download ArcOS Today
+                    <span class="material-icons right">arrow_forward_ios</span>
+                </p>
+            </button>   
+        </a>
+            </center>
+        </div>
+    </div>
+    <div class="newStartMenu small" id="startMenu" tabindex="-1" style="opacity: 1;visibility: visible;">
+        <div class="bottomPane">
+            <span class="h3" id="usernameStartMenu">ArcOS</span>
+            <button class="transparent newStartMenuShutDownButton">
+                <span class="material-icons">
+                    power_settings_new
+                </span>
+            </button>
+
+            <button class="transparent newStartMenuShutDownButton">
+                <span class="material-icons">
+                    lock
+                </span>
+            </button>
+        </div>
+        <div class="leftPane" id="startMenuAppList">
+            <button class="transparent fullWidth textAlignLeft">
+                <img src="./img/file manager.svg" style="height:15px;vertical-align:middle">&nbsp;&nbsp;File Manager</button>
+                <button class="transparent fullWidth textAlignLeft">
+                    <img src="./img/arcos notepad.svg" style="height:15px;vertical-align:middle">&nbsp;&nbsp;ArcOS Notepad</button>
+                    <button class="transparent fullWidth textAlignLeft">
+                        <img src="./img/systemIcon.svg" style="height:15px;vertical-align:middle">&nbsp;&nbsp;Welcome To ArcOS</button>
+        </div>
+
+        <div class="rightPane">
+            <button class="transparent fullWidth textAlignLeft">
+                <img src="./../img/file manager.svg">&nbsp;&nbsp;File Manager
+            </button><br>
+            <hr>
+            <button class="transparent fullWidth textAlignLeft">
+                <img src="./../img/settings.svg">&nbsp;&nbsp;Settings
+            </button><br>
+            <button class="transparent fullWidth textAlignLeft">
+                <span class="material-icons">palette</span>&nbsp;&nbsp;Personalization
+            </button><br>
+            <button class="transparent fullWidth textAlignLeft">
+                <span class="material-icons">extension</span>&nbsp;&nbsp;Import App
+            </button><br>
+            <button class="transparent fullWidth textAlignLeft">
+                <span class="material-icons">account_circle</span>&nbsp;&nbsp;User Settings
+            </button><br>
+            <button class="transparent fullWidth textAlignLeft">
+                <span class="material-icons">autorenew</span>&nbsp;&nbsp;Updates
+            </button><br>
+            <hr>
+            <button class="transparent fullWidth textAlignLeft">
+                <img src="./../img/execute command.svg">&nbsp;&nbsp;Execute Command
+            </button><br>
+        </div>
+    </div>
+    <div class="notificationCenter" id="notificationCenter" tabindex="-1">
+        <h2 class="notificationCenterHeader">
+            Notifications
+            <button id="notificationCenterClearButton" class="transparent">
+                Clear
+            </button>
+        </h2>
+        <div class="notifications" id="notificationCenterInline"></div>
+        <div class="actions">
+            <span class="row">
+                <div class="notificationCenterAction">
+                    <h3 margin-top:10px;">Current Time</h3>
+                    <h1 style="margin:0px;"><span id="taskbarClockWidgetTime">--:--</span>
+                    </h1>
+                </div>
+                <div class="notificationCenterAction">
+                    <br>
+                    <p style="margin-top:10px;">
+                        <label for="volumeControlEnableSoundSwitch" style="vertical-align: middle;">Mute Sound</label>
+                        <input type="checkbox" id="volumeControlEnableSoundSwitch"
+                            style="min-width: unset;vertical-align: middle;">
+                    </p>
+                </div>
+            </span>
+            <span class="row">
+                <div class="notificationCenterAction">
+                    <p style="margin-bottom:5px;">Volume:</p>
+                    <input type="range" min="1" max="10" id="systemVolumeSlider" style="width:50%;padding:0px;"
+                        class="slider">
+                </div>
+                <div class="notificationCenterAction">
+                    <h3 style="margin: 9px 0;">
+                        ArcOS Updates
+                    </h3>
+                    <button class="transparent">Goto
+                        Settings</button>
+                </div>
+            </span>
+        </div>
+    </div>
+    <div class="taskbar" id="taskbar" tabindex="-1">
+        <button class="startButton" id="startButton">
+            <img src="./img/systemIcon.svg" height="20px">
+        </button>
+        <div id="taskbarButtons" class="taskbarButtons"></div>
+        <span style="float:right;height:43px;">
+            <button class="startButton" style="height:100%;margin-right:10px;padding-top:12px;"
+                id="notificationCenterButton">
+                <span class="material-icons" style="vertical-align: top;font-size:16px;">notifications</span>
+                &nbsp;&nbsp;
+                <span class="material-icons" style="vertical-align: top;font-size:15px;">volume_up</span>&nbsp;&nbsp;
+                <span id="taskbarClock" style="vertical-align: middle;">--:--</span>
+            </button>
+        </span>
+    </div>
+
+    <link rel="stylesheet" href="./css/newUserInterface.css">
+</body>
+
+</html>
