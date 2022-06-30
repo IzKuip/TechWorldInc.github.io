@@ -36,6 +36,7 @@ async function output(url) {
             headerLink.append(header);
             headerLink.target = "_blank";
             headerLink.href = i.html_url;
+            headerLink.rel = "noopener noreferrer";
 
             subHeader.style.fontWeight = "100";
             subHeader.style.opacity = "0.5";
@@ -89,5 +90,5 @@ async function populateProjectsPage() {
     let projectsOutput = document.getElementById("projectsOutput");
     projectsOutput.innerHTML = "";
     await output("https://api.github.com/orgs/TWI-ArcOS/repos");
-    await output("https://api.github.com/users/TechWorldInc/repos");
+    await output("https://api.github.com/users/IzKuip/repos");
 }
