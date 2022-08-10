@@ -90,5 +90,5 @@ async function populateProjectsPage() {
     let projectsOutput = document.getElementById("projectsOutput");
     projectsOutput.innerHTML = "";
     await output("https://api.github.com/orgs/TWI-ArcOS/repos");
-    await output("https://api.github.com/users/IzKuip/repos");
+    await output("https://api.github.com/users/IzKuipers/repos");
 }
